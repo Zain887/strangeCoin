@@ -1,0 +1,517 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    background-color: black;
+    font-family: "Oswald", sans-serif;
+    background-image: url('images/ST360_03_MindFlayer.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+.desktop {
+    display: block;
+}
+
+.mobile {
+    display: none;
+}
+
+header {
+    position: relative;
+    overflow: hidden;
+}
+
+header .welstrange {
+    width: 100%;
+    height: auto;
+}
+
+header section {
+    position: fixed;
+    z-index: 20;
+    width: 100%;
+    top: 0;
+}
+
+header section nav {
+    background-color: #000000ad;
+    padding: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    backdrop-filter: blur(25px);
+    list-style: none;
+}
+
+header section nav li {
+    width: 130px;
+    padding: 4px;
+    text-align: center;
+}
+
+header section nav li a {
+    text-decoration: none;
+    color: #C11817;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+header section nav li:hover a {
+    font-weight: 900;
+    transition-duration: 0.5s;
+    border: 1px solid #024977;
+    padding: 4px 8px;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+header .strang {
+    width: auto;
+    height: 178px;
+    position: absolute;
+    cursor: pointer;
+    top: 31%;
+    left: 45%;
+    z-index: 2;
+    animation: mover 2s 0s forwards, rotate 3s 3s infinite;
+}
+
+header .headerpara {
+    position: absolute;
+    top: 20%;
+    left: 2%;
+    z-index: 10;
+    color: aliceblue;
+    width: 400px;
+    word-spacing: 8px;
+    letter-spacing: 2px;
+    padding: 20px;
+    text-shadow: 5px 0px 10px blue;
+    font-size: 20px;
+    backdrop-filter: blur(5px);
+    font-weight: 500;
+    border: 2px dashed cadetblue;
+    border-radius: 20px;
+    opacity: 0%;
+    animation: fadeup 1s 3s forwards;
+}
+
+section .about {
+    font-size: 50px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    margin: 50px auto;
+    text-shadow: 0px 0px 25px red;
+}
+
+section .aboutpara:hover {
+    box-shadow: 0px 0px 10px red;
+    cursor: pointer;
+}
+
+section .aboutpara {
+    width: 70%;
+    margin: auto;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 2px;
+    backdrop-filter: blur(8px);
+    padding: 50px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 10px white;
+    border-radius: 10px;
+    line-height: 50px;
+    transition-duration: 1s;
+}
+
+.socialmedia {
+    position: fixed;
+    right: 2%;
+    top: 50%;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.socialmedia a {
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 25px white;
+    position: relative;
+}
+
+.socialmedia a::after {
+    content: "Click To Join Now";
+    position: absolute;
+    color: red;
+    border-radius: 20px 0 0 20px;
+    font-size: 20px;
+    right: 85%;
+    top: 11%;
+    width: 125px;
+    background-color: black;
+    padding: 5px 10px;
+    z-index: -1;
+    transform: rotateY(90deg);
+    transform-origin: right;
+    transition-duration: .5s;
+}
+
+.socialmedia a:nth-child(1):hover::after {
+    transform: rotatey(0deg);
+}
+
+.socialmedia a:nth-child(2):hover::after {
+    transform: rotatey(0deg);
+}
+
+.socialmedia a:nth-child(3):hover::after {
+    transform: rotatey(0deg);
+}
+
+.socialmedia a img {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+
+.about-wrraper-inner {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+.about-wrraper-inner .imgWrapper {
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    left: 26px;
+    top: 0;
+    z-index: 1;
+}
+
+.about-wrraper-inner .imgWrapper img {
+    width: 100%;
+    height: 100%;
+}
+
+.roadmap {
+    width: 80%;
+    text-align: center;
+    position: relative;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+.roadmap img {
+    position: relative;
+    width: 70%;
+    margin: auto;
+    border-radius: 20px;
+    box-shadow: 0 0 20px orange;
+}
+
+.roadmap ol {
+    padding: 30px;
+    backdrop-filter: blur(25px);
+    border-radius: 8px 0 8px 0;
+    box-shadow: 0 0 25px rgb(255, 187, 0);
+}
+
+.roadmap ol li::marker {
+    color: rgb(255, 187, 0);
+    font-weight: bolder;
+}
+
+.roadmap ol li {
+    color: white;
+    font-size: 26px;
+    font-weight: lighter;
+    text-align: left;
+}
+
+.roadmap ol li span {
+    font-weight: bold;
+    color: rgb(255, 187, 0);
+}
+
+.Tokenomics {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    row-gap: 20px;
+}
+
+.tokenomicsWrapper {
+    width: 35%;
+    height: auto;
+    position: relative;
+}
+
+.tokenomicsWrapper p {
+    height: 100%;
+    color: white;
+    font-size: 20px;
+    font-weight: 200;
+    padding: 20px;
+    box-sizing: border-box;
+    backdrop-filter: blur(15px);
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    border-radius: 50px;
+    right: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transform: rotatey(90deg);
+}
+
+.tokenomicsWrapper:hover p {
+    transform: rotateY(0deg);
+    transform-origin: left;
+    transition-duration: .5s;
+}
+
+.tokenomicsWrapper .img-holder {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    border-radius: 50px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+}
+
+.tokenomicsWrapper:nth-child(1) .img-holder::after {
+    content: "TAXES = 0/0";
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 0px 0px 25px whitesmoke;
+    color: wheat;
+    font-weight: 800;
+    font-size: 50px;
+}
+
+.tokenomicsWrapper:nth-child(2) .img-holder::after {
+    content: "SUPPLY 1 MILLION";
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 0px 0px 25px whitesmoke;
+    color: wheat;
+    font-weight: 800;
+    font-size: 50px;
+}
+
+.tokenomicsWrapper:nth-child(3) .img-holder::after {
+    content: "LIQUIDITY BURNED";
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 0px 0px 25px whitesmoke;
+    color: wheat;
+    font-weight: 800;
+    font-size: 50px;
+}
+
+.tokenomicsWrapper:nth-child(4) .img-holder::after {
+    content: "MINT & FREEZE REVOKED";
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 0px 0px 25px whitesmoke;
+    color: wheat;
+    font-weight: 800;
+    font-size: 50px;
+}
+
+
+.tokenomicsWrapper .img-holder img {
+    width: 100%;
+    height: auto;
+}
+
+.howToBuy {
+    color: white;
+}
+
+.howToBuy ol{
+    backdrop-filter: blur(25px);
+    padding: 30px;
+}
+
+.howToBuy ol li {
+    font-size: 26px;
+    text-align: justify;
+    text-transform: uppercase;
+    width: 50%;
+    margin: auto;
+}
+.howToBuy ol li::marker{
+    color: rgb(255, 187, 0);
+    font-weight: bolder;
+}
+.howToBuy ol li span {
+    font-weight: 500;
+    color: rgb(255, 187, 0);
+    text-shadow: 0 0 25px whitesmoke;
+}
+
+@keyframes mover {
+    0% {
+        height: 10px;
+    }
+
+    100% {
+        height: 178px;
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotatey(0deg);
+    }
+
+    100% {
+        transform: rotatey(360deg);
+    }
+}
+
+@keyframes fadeup {
+    0% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+    header section nav {
+        padding: 5px;
+    }
+
+    header section nav li {
+        padding: 2px;
+        width: fit-content;
+    }
+
+    header .strang {
+        top: 8%;
+        width: 60px;
+    }
+
+    header .headerpara {
+        position: relative;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 0;
+        font-size: 14px;
+        box-sizing: border-box;
+        width: 90%;
+        padding: 15px;
+        margin: 30px auto;
+    }
+
+    section .aboutpara {
+        width: 90%;
+        font-size: 20px;
+        letter-spacing: 0px;
+        padding: 20px;
+        line-height: 30px;
+    }
+
+    .about-wrraper-inner {
+        flex-direction: column;
+    }
+
+    .about-wrraper-inner .imgWrapper {
+        left: 0;
+        top: 20px;
+        z-index: 1;
+    }
+
+    .roadmap {
+        width: 90%;
+        display: block;
+    }
+
+    .roadmap ol li {
+        font-size: 20px;
+    }
+
+    .Tokenomics {
+        flex-direction: column;
+    }
+
+    .tokenomicsWrapper {
+        width: 95%;
+    }
+
+    .tokenomicsWrapper:nth-child(1) .img-holder::after {
+        font-size: 35px;
+    }
+
+    .tokenomicsWrapper:nth-child(2) .img-holder::after {
+        font-size: 35px;
+    }
+
+    .tokenomicsWrapper:nth-child(3) .img-holder::after {
+        font-size: 35px;
+    }
+
+    .tokenomicsWrapper:nth-child(4) .img-holder::after {
+        font-size: 35px;
+    }
+
+    .tokenomicsWrapper p {
+        font-size: 16px;
+    }
+    .howToBuy ol li{
+        width: 90%;
+        font-size: 20px;
+    }
+}
